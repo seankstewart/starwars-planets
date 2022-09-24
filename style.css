@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+}
+  
+.sw-container {
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sw-inner-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  /* position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0; */
+  /* z-index: 1; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  background: #E3E3E3;
+  padding: 0.5rem 0;
+}
+
+#planets {
+  max-width: 96%;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: .25rem;
+}
+
+
+.card {
+  min-height: 25vh;
+  padding: .25rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
+
+.pagination {
+  margin: 0; 
+}
+
+@media (max-width: 480px)  {
+  #planets {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 100%;
+  }
+}
+
+.loading {
+  visibility: hidden
+}
